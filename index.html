@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>مستر کافی نت | خدمات اینترنتی</title>
+<title>مستر کافی نت | امیرمحمد نادرزاده</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
-:root{--gold:#f4c542;--gold2:#ffe08a;--bg:#090909;--panel:#151515;--muted:#bdb7a8}
+:root{--gold:#f4c542;--gold2:#ffe08a;--bg:#090909;--muted:#bdb7a8}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:#f8f5eb;font-family:'Vazirmatn',Tahoma,sans-serif;line-height:1.8}
@@ -21,10 +21,10 @@ nav a:hover{color:var(--gold)}
 .btn:hover{background:var(--gold2);transform:translateY(-1px)}
 .btn-outline{border:1px solid var(--gold);background:transparent;color:var(--gold)}
 .hero{padding:76px 0 62px;background:radial-gradient(ellipse at 50% 0,#4a3713 0%,#171208 34%,#090909 72%);text-align:center}
-.tag{display:inline-block;border:1px solid #66501c;border-radius:99px;padding:4px 14px;color:var(--gold2);font-size:.88rem}
-h1{font-size:clamp(2rem,5vw,3.7rem);line-height:1.35;margin:18px auto;max-width:850px}
+.tag{display:block;border:0;border-radius:0;padding:0;margin:0 auto 10px;color:var(--gold);font-size:clamp(2rem,6vw,3.5rem);font-weight:900;line-height:1.25;letter-spacing:-.5px}
+h1{font-size:clamp(1.65rem,4.5vw,3.4rem);line-height:1.5;margin:18px auto;max-width:1100px;white-space:nowrap}
 h1 span{color:var(--gold)}
-.hero p{color:#d1cabb;max-width:660px;margin:0 auto 25px}
+.hero p{color:#d1cabb;max-width:760px;margin:0 auto 25px;font-size:1.08rem}
 .actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 section{padding:55px 0}
 .section-title{text-align:center;margin:0 0 8px;font-size:clamp(1.5rem,3vw,2.2rem)}
@@ -51,7 +51,7 @@ footer{border-top:1px solid #332a17;padding:24px 0;color:#a9a294;text-align:cent
 .modal-box{background:#151515;border:1px solid #6a511d;border-radius:18px;padding:24px;width:min(440px,100%);position:relative}
 .modal-box h2{color:var(--gold);margin-top:0}
 .close{position:absolute;left:15px;top:10px;background:none;border:0;color:#fff;font-size:1.6rem;cursor:pointer}
-@media(max-width:760px){.cards{grid-template-columns:repeat(2,1fr)}.about-inner,.contact-grid{grid-template-columns:1fr}.nav{align-items:flex-start;flex-direction:column}nav{gap:12px}.hero{padding-top:55px}}
+@media(max-width:760px){h1{white-space:normal;font-size:clamp(1.5rem,6vw,2.3rem)}.cards{grid-template-columns:repeat(2,1fr)}.about-inner,.contact-grid{grid-template-columns:1fr}.nav{align-items:flex-start;flex-direction:column}nav{gap:12px}.hero{padding-top:55px}}
 @media(max-width:480px){.cards{grid-template-columns:1fr}.card{padding:18px}section{padding:42px 0}}
 </style>
 </head>
@@ -59,13 +59,13 @@ footer{border-top:1px solid #332a17;padding:24px 0;color:#a9a294;text-align:cent
 <header><div class="container nav">
 <a class="logo" href="#home">✦ مستر کافی نت</a>
 <nav><a href="#home">خانه</a><a href="#services">خدمات</a><a href="#about">درباره ما</a><a href="#contact">تماس با ما</a></nav>
-<button class="btn btn-outline" onclick="openModal('loginModal')">ورود / ثبت‌نام</button>
+<a class="btn btn-outline" href="#contact">تماس با ما</a>
 </div></header>
 <main>
 <section class="hero" id="home"><div class="container">
-<span class="tag">خدمات اینترنتی، سریع و مطمئن</span>
-<h1>کارهای اینترنتی‌ات رو<br><span>به ما بسپار!</span></h1>
-<p>مستر کافی نت؛ همراه شما برای انجام امور اینترنتی، ثبت‌نام‌ها، خدمات کامپیوتری و کارهای آنلاین با دقت و احترام.</p>
+<span class="tag">مستر کافی نت</span>
+<h1>کارهای اینترنتی‌ات رو <span>به ما بسپار!</span></h1>
+<p>انجام ثبت‌نام‌ها به صورت آنلاین و غیرحضوری</p>
 <div class="actions"><a class="btn" href="#contact">درخواست خدمات</a><a class="btn btn-outline" href="#services">دیدن خدمات</a></div>
 </div></section>
 <section id="services"><div class="container">
@@ -79,23 +79,18 @@ footer{border-top:1px solid #332a17;padding:24px 0;color:#a9a294;text-align:cent
 <article class="card"><div class="emoji">💻</div><h3>خدمات کامپیوتری</h3><p>تایپ، مرتب‌سازی فایل‌ها و راهنمایی نرم‌افزاری پایه.</p></article>
 </div></div></section>
 <section class="about" id="about"><div class="container about-inner">
-<div><h2 class="section-title" style="text-align:right">درباره مستر کافی نت</h2><p>هدف ما اینه که کارهای اینترنتی شما راحت‌تر و سریع‌تر انجام بشه. با برخورد دوستانه و دقت در انجام درخواست‌ها، تلاش می‌کنیم تجربه‌ای خوب براتون بسازیم.</p><p class="small">متن و اطلاعات این سایت قابل ویرایش هستند.</p></div>
-<div class="info-box"><p>⭐ <strong>دقیق و مسئولیت‌پذیر</strong></p><p>⚡ <strong>پاسخ‌گویی سریع</strong></p><p>🤝 <strong>همراه شما در امور آنلاین</strong></p></div>
+<div><h2 class="section-title" style="text-align:right">درباره مستر کافی نت</h2><p>من <strong style="color:var(--gold)">امیرمحمد نادرزاده</strong> هستم. هدفم اینه که کارهای اینترنتی شما راحت‌تر و سریع‌تر انجام بشه. برای ثبت‌نام‌های آنلاین و امور اینترنتی می‌تونید با من تماس بگیرید.</p></div>
+<div class="info-box"><p>⭐ <strong>دقیق و مسئولیت‌پذیر</strong></p><p>⚡ <strong>پاسخ‌گویی سریع</strong></p><p>🤝 <strong>انجام ثبت‌نام آنلاین و غیرحضوری</strong></p></div>
 </div></section>
-<section id="contact"><div class="container"><h2 class="section-title">تماس با ما</h2><p class="section-sub">برای ثبت درخواست، فرم زیر را پر کن.</p>
+<section id="contact"><div class="container"><h2 class="section-title">تماس با ما</h2><p class="section-sub">برای هماهنگی خدمات با ما تماس بگیر.</p>
 <div class="contact-grid">
-<div class="info-box"><h3>اطلاعات تماس</h3><p>📞 تلفن: <strong>شماره تماس خود را وارد کنید</strong></p><p>📍 آدرس: <strong>آدرس کافی‌نت خود را وارد کنید</strong></p><p class="small">قبل از انتشار، شماره و آدرس واقعی خودت را جایگزین کن.</p></div>
+<div class="info-box"><h3>اطلاعات تماس</h3><p>📞 تلفن: <strong dir="ltr">09139510048</strong></p><p>👤 نام: <strong>امیرمحمد نادرزاده</strong></p><p><a class="btn" href="tel:09139510048">تماس تلفنی</a></p></div>
 <form onsubmit="sendRequest(event)"><input id="customerName" required placeholder="نام شما"><input id="customerPhone" required placeholder="شماره تماس"><select id="service"><option>ثبت‌نام اینترنتی</option><option>سامانه‌های دولتی</option><option>چاپ و کپی</option><option>امور آموزشی</option><option>خدمات کامپیوتری</option><option>سایر موارد</option></select><textarea id="details" placeholder="توضیحات درخواست"></textarea><button class="btn" type="submit">ثبت درخواست</button><p class="small">این فرم نمونه است و بدون اتصال به سرور، اطلاعات را ذخیره یا ارسال نمی‌کند.</p></form>
 </div></div></section>
 </main>
-<footer><div class="container">© <span id="year"></span> مستر کافی نت — همه حقوق محفوظ است.</div></footer>
-<div class="modal" id="loginModal" role="dialog" aria-modal="true"><div class="modal-box"><button class="close" onclick="closeModal('loginModal')" aria-label="بستن">×</button><h2>ورود / ثبت‌نام</h2><form onsubmit="demoForm(event)"><input type="text" placeholder="نام کاربری یا شماره موبایل" required><input type="password" placeholder="رمز عبور" required><button class="btn" type="submit">ادامه</button></form><p class="small">این بخش نمایشی است؛ برای ورود واقعی باید سیستم کاربری و پایگاه داده راه‌اندازی شود.</p></div></div>
+<footer><div class="container">© <span id="year"></span> مستر کافی نت | امیرمحمد نادرزاده</div></footer>
 <script>
 document.getElementById('year').textContent=new Date().getFullYear();
-function openModal(id){document.getElementById(id).classList.add('show')}
-function closeModal(id){document.getElementById(id).classList.remove('show')}
-document.querySelectorAll('.modal').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('show')}));
-function demoForm(e){e.preventDefault();alert('این بخش در نسخه نمایشی است و هنوز سیستم ورود واقعی ندارد.');}
-function sendRequest(e){e.preventDefault();const n=document.getElementById('customerName').value;alert('ممنون '+n+'! این فرم نمایشی است و درخواست ارسال نشده است. برای ارسال واقعی باید فرم به سرویس یا سرور متصل شود.');}
+function sendRequest(e){e.preventDefault();alert('ممنون! این فرم هنوز به سامانه ارسال درخواست وصل نشده است. برای هماهنگی با شماره 09139510048 تماس بگیرید.');}
 </script>
 </body></html>
